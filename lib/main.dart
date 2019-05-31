@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:helloflutter/pages/landing_page.dart';
+import 'package:helloflutter/pages/lifecounter_page.dart';
 
 void main() => runApp(MtgFlutter());
 
