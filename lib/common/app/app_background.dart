@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:helloflutter/styleguide/colors.dart';
+import 'package:mtgflutter/styleguide/colors.dart';
 
 class AppBackground extends StatelessWidget {
   @override

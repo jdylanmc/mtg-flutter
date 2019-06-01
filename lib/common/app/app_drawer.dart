@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:helloflutter/pages/browse_cards.dart';
-import 'package:helloflutter/pages/browse_sets.dart';
-import 'package:helloflutter/pages/lifecounter_page.dart';
-import 'package:helloflutter/pages/search_page.dart';
-import 'package:helloflutter/styleguide/colors.dart';
+import 'package:mtgflutter/pages/browse_cards.dart';
+import 'package:mtgflutter/pages/browse_sets.dart';
+import 'package:mtgflutter/pages/lifecounter_page.dart';
+import 'package:mtgflutter/pages/search_page.dart';
+import 'package:mtgflutter/styleguide/colors.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
@@ -23,7 +23,7 @@ class AppDrawer extends StatelessWidget {
               trailing: new Icon(Icons.arrow_right),
               onTap: () {
                 Navigator.of(context).pop();
-                Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new LifeCounterPage("Life Counter")));
+                Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new LifeCounterPage("Lifecounter")));
               }
             ),
             new ListTile(

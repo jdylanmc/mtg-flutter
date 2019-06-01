@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:helloflutter/common/app/app_background.dart';
-import 'package:helloflutter/common/app/app_scaffold.dart';
+import 'package:mtgflutter/common/app/app_background.dart';
+import 'package:mtgflutter/common/app/app_scaffold.dart';
 
 class SearchPage extends StatelessWidget {
   final String pageText;

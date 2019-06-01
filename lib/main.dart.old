@@ -3,16 +3,16 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'views/card-cell.dart';
 
-void main() => runApp(HelloFlutter());
+void main() => runApp(mtgflutter());
 
-class HelloFlutter extends StatefulWidget {
+class mtgflutter extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    return new HelloFlutterState();
+    return new mtgflutterState();
   }
 }
 
-class HelloFlutterState extends State<HelloFlutter> {
+class mtgflutterState extends State<mtgflutter> {
   var _isLoading = true;
   var pageSize = 10;
   var pageNum = 0;
