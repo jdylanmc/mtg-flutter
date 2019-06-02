@@ -9,7 +9,6 @@ class PlayerBloc extends Bloc<PlayerEvent, Player> {
 
   @override
   Stream<Player> mapEventToState(PlayerEvent event) async* {
-    print("mapEventToState called");
     if (event.type == PlayerCounterType.Life &&
         event.direction == PlayerDirectionType.Increment) {
       yield new Player(currentState.name, currentState.life + 1, currentState.energy, currentState.experience, currentState.plague, currentState.poison);

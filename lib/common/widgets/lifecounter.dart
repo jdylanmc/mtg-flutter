@@ -36,7 +36,6 @@ class Lifecounter extends StatelessWidget {
                             new PlayerEvent(PlayerCounterType.Life,
                                 PlayerDirectionType.Decrement),
                           );
-                          print("decrement button pressed");
                         },
                         iconSize: 26,
                       ),
