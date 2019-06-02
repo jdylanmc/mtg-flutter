@@ -5,8 +5,8 @@ import 'package:mtgflutter/common/widgets/lifecounter.dart';
 
 class LifeCounterPage extends StatelessWidget {
   final String pageText;
-  
-  LifeCounterPage(this.pageText);  
+
+  LifeCounterPage(this.pageText);
 
   Widget build(BuildContext context) {
     return AppScaffold(
@@ -15,9 +15,17 @@ class LifeCounterPage extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             AppBackground(),
-            Center(child: Lifecounter())
+            Center(
+              child: SingleChildScrollView(
+                child: Column(
+                  children: <Widget>[
+                    Lifecounter()
+                  ],
+                ),
+              ),
+            )
           ],
-        )
+        ),
       ),
     );
   }

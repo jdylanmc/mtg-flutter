@@ -9,39 +9,72 @@ class Lifecounter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final PlayerBloc _playerBloc = BlocProvider.of<PlayerBloc>(context);
-    
+
     return BlocBuilder<PlayerEvent, Player>(
-      bloc:_playerBloc,
+      bloc: _playerBloc,
       builder: (BuildContext context, Player player) {
-        return Row(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Expanded(child: IconButton(
-              icon: Icon(Icons.remove),
-              onPressed: () { 
-                _playerBloc.dispatch(new PlayerEvent(PlayerCounterType.Life, PlayerDirectionType.Decrement)); 
-                print("decrement button pressed");
-              },
-              iconSize: 30,
-            )),
-            Expanded(child: Center(child: Text("${player.life}", style:TextStyle(fontSize: 36)))),
-            Expanded(child: IconButton(
-              icon:Icon(Icons.add),
-              onPressed: () { 
-                _playerBloc.dispatch(new PlayerEvent(PlayerCounterType.Life, PlayerDirectionType.Increment)); 
-                print("increment button pressed");
-              },
-              iconSize: 30,
-            ))
-            
-            
-          ]
+        return Container(
+          margin:EdgeInsets.fromLTRB(20, 5, 20, 5),
+          child: Card(
+            elevation: 5.0,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Center(
+                  child: Text(
+                    "${player.name}",
+                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
+                  ),
+                ),
+                Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 2,
+                      child: IconButton(
+                        icon: Icon(Icons.remove),
+                        onPressed: () {
+                          _playerBloc.dispatch(
+                            new PlayerEvent(PlayerCounterType.Life,
+                                PlayerDirectionType.Decrement),
+                          );
+                          print("decrement button pressed");
+                        },
+                        iconSize: 26,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 3,
+                      child: Center(
+                        child: Text(
+                          "${player.life}",
+                          style: TextStyle(fontSize: 26),
+                        ),
+                      ),
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child: IconButton(
+                        icon: Icon(Icons.add),
+                        onPressed: () {
+                          _playerBloc.dispatch(
+                            new PlayerEvent(PlayerCounterType.Life,
+                                PlayerDirectionType.Increment),
+                          );
+                        },
+                        iconSize: 26,
+                      ),
+                    )
+                  ],
+                ),
+              ],
+            ),
+          ),
         );
-      }
+      },
     );
   }
 }
-
 
 /*
 class LifecounterOld extends StatefulWidget {

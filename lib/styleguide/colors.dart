@@ -11,10 +11,10 @@ final Color glitter = Color(0xFFE7ECEF);
 
 
 final Color primaryColor = Color(0xFFFF9F59);
-final Color backgroundColor = glitter;
-final Color gray1 = cadet.withOpacity(0.3);
-final Color gray2 = cadet.withOpacity(0.6);
-final Color gray3 = cadet.withOpacity(0.9);
+final Color backgroundColor = jet;
+final Color gray1 = ghost.withOpacity(0.9);
+final Color gray2 = ghost.withOpacity(0.8);
+final Color gray3 = cadet.withOpacity(0.1);
 
 
 

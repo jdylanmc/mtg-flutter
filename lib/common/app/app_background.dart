@@ -17,7 +17,7 @@ class AppBackground extends StatelessWidget {
               left: -((height - width) / 2),
               bottom: height * .1,
               child: Container(
-                height: height,
+                height: height, 
                 width: height,
                 decoration:BoxDecoration(
                   shape: BoxShape.circle,
