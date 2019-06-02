@@ -3,7 +3,6 @@ import 'package:mtgflutter/pages/browse_cards.dart';
 import 'package:mtgflutter/pages/browse_sets.dart';
 import 'package:mtgflutter/pages/lifecounter_page.dart';
 import 'package:mtgflutter/pages/search_page.dart';
-import 'package:mtgflutter/styleguide/colors.dart';
 
 class AppDrawer extends StatelessWidget {
   @override
@@ -14,7 +13,6 @@ class AppDrawer extends StatelessWidget {
             new DrawerHeader(
               child: null,
               decoration: new BoxDecoration(
-                color: cadet,
                 image:DecorationImage(image: AssetImage('assets/unwind.png'), fit: BoxFit.cover)
               )
             ),

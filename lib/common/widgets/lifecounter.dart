@@ -14,9 +14,7 @@ class Lifecounter extends StatelessWidget {
       bloc: _playerBloc,
       builder: (BuildContext context, Player player) {
         return Container(
-          margin:EdgeInsets.fromLTRB(20, 5, 20, 5),
           child: Card(
-            elevation: 5.0,
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
